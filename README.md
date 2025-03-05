@@ -84,7 +84,7 @@ The goal of this project is to detect if a lanuange in yoruba is based off of te
 
 1. **Run the Flask App**:
    ```bash
-   python app.py
+   python main.py
    ```
 
 2. **Open the App**:
@@ -123,9 +123,10 @@ The model was developed using the following steps:
 
 ```
 offensive-language-detection/
-├── app.py                  # Streamlit/Flask app
+├── app.py                  # Streamlit app
+├── main.py                  # Flask app
 ├── requirements.txt        # List of dependencies
-├── logistic_regression_model.pkl  # Trained Logistic Regression model
+├── lr_model.pkl  # Trained Logistic Regression model
 ├── tfidf_vectorizer.pkl    # Fitted TF-IDF Vectorizer
 ├── README.md               # Project documentation
 ├── templates/              # Flask HTML templates
