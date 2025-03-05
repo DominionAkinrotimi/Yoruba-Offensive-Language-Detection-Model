@@ -2,11 +2,15 @@ import streamlit as st
 import re
 import emoji
 import joblib
+import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import logging
 logging.getLogger("streamlit.runtime.scriptrunner_utils").setLevel(logging.ERROR)
+
+# Download the stopwords dataset if not already downloaded
+nltk.download('stopwords')
 
 # Load the trained model and vectorizer
 model = joblib.load('lr_model.pkl')
