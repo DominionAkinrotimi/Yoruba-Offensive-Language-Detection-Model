@@ -42,7 +42,7 @@ The goal of this project is to detect if a lanuange in yoruba is based off of te
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/offensive-language-detection.git
+   git clone https://github.com/DominionAkinrotimi/Yoruba-Offensive-Language-Detection-Model.git
    cd offensive-language-detection
    ```
 
