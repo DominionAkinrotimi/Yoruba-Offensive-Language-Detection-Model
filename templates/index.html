@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offensive Language Detection</title>
+</head>
+<body>
+    <h1>Offensive Language Detection</h1>
+    <form id="textForm">
+        <label for="textInput">Enter a sentence to check if it contains offensive language:</label><br>
+        <textarea id="textInput" name="text" rows="4" cols="50"></textarea><br><br>
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+    <h2>Result:</h2>
+    <p id="result"></p>
+
+    <script>
+        function predict() {
+            const text = document.getElementById('textInput').value;
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: text }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultElement = document.getElementById('result');
+                if (data.prediction === 'Offensive') {
+                    resultElement.style.color = 'red';
+                    resultElement.textContent = 'The text contains offensive language.';
+                } else if (data.prediction === 'Hate') {
+                    resultElement.style.color = 'red';
+                    resultElement.textContent = 'The text contains hate speech.';
+                } else {
+                    resultElement.style.color = 'green';
+                    resultElement.textContent = 'The text does not contain offensive language.';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
