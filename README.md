@@ -43,7 +43,7 @@ The goal of this project is to detect if a lanuange in yoruba is based off of te
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/DominionAkinrotimi/Yoruba-Offensive-Language-Detection-Model.git
-   cd offensive-language-detection
+   cd Yoruba-Offensive-Language-Detection-Model
    ```
 
 2. **Create a Virtual Environment** (Optional but Recommended):
@@ -155,7 +155,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## Acknowledgments
 
-- The dataset used for training was sourced from [Kaggle](https://www.kaggle.com).
+- The dataset used for training was sourced from 🙈 (I'm shy).
 - Special thanks to the developers of **scikit-learn**, **Streamlit**, and **Flask** for their amazing libraries.
 
 ---
